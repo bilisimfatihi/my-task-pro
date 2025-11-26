@@ -1,0 +1,37 @@
+{
+   "scripts": {
+      "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+      "install:all": "npm install --prefix backend && npm install --prefix frontend",
+      "build": "npm run build --prefix frontend",
+      "start": "npm run start --prefix backend"
+   },
+   "dependencies": {
+      "@blueprintjs/core": "^6.3.4",
+      "@hookform/resolvers": "^5.2.2",
+      "@mui/x-date-pickers": "^8.18.0",
+      "axios": "^1.13.2",
+      "bcryptjs": "^3.0.3",
+      "cloudinary": "^2.8.0",
+      "cors": "^2.8.5",
+      "dayjs": "^1.11.19",
+      "dotenv": "^17.2.3",
+      "express": "^5.1.0",
+      "express-async-handler": "^1.2.0",
+      "joi": "^18.0.2",
+      "jsonwebtoken": "^9.0.2",
+      "mongoose": "^8.19.4",
+      "nodemailer": "^7.0.10",
+      "pino-http": "^11.0.0",
+      "pino-pretty": "^13.1.2",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1",
+      "react-ellipsis-text": "^1.2.1",
+      "react-hook-form": "^7.66.0",
+      "swagger-ui-express": "^5.0.1",
+      "yup": "^1.7.1"
+   },
+   "devDependencies": {
+      "concurrently": "^9.2.1",
+      "nodemon": "^3.1.11"
+   }
+}
