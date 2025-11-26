@@ -1,0 +1,190 @@
+import React from "react";
+import styled from "styled-components";
+import { IoClose } from "react-icons/io5";
+
+export const BackDrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(p) => p.theme.colors.modalBgColor};
+`;
+
+export const Modal = styled.div`
+  position: relative;
+  width: 320px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: ${(p) => p.theme.colors.modalWindowsBgColor};
+  border: 1px solid ${(p) => p.theme.colors.modalBorderColorLowOp};
+  box-shadow: 0 4px 16px 0 rgba(22, 22, 22, 0.08);
+
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    width: 90%;
+  }
+  
+  @media screen and (min-width: 768px) {
+    width: 340px;
+  }
+`;
+
+export const StyledTitle = styled.h2`
+  font-size: 18px;
+  font-weight: 500;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+  text-align: left;
+  letter-spacing: -0.02em;
+`;
+
+export const CloseBtn = styled.span`
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+`;
+
+export const CloseIcon = styled(IoClose)`
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+
+  font-size: 2rem;
+
+  transition: all var(--primary-transition);
+
+  &:hover {
+    transform: rotate(90deg);
+    color: ${(p) => p.theme.colors.accentTextColor};
+  }
+`;
+
+export const StyledWrapper = styled.div`
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid ${(p) => p.theme.colors.modalBorderColorLowOp};
+`;
+
+export const Box = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0 12px;
+`;
+export const Text = styled.p`
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+`;
+export const Btn = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  color: ${(p) => p.theme.colors.secondaryTextColorLowOp};
+  transition: color var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.accentTextColor};
+  }
+`;
+export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  list-style: none;
+  padding: 0;
+`;
+export const Item = styled.li`
+  list-style: none;
+`;
+
+export const Label = styled.label`
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+  transition: color var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.accentTextColor};
+  }
+`;
+export const RadioInput = styled.input`
+  display: none;
+`;
+
+export const Radio = styled.span`
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+
+  background-color: ${(p) =>
+    p?.$priority === "without"
+      ? p.theme.colors.priorityColorWithout
+      : p?.$priority === "low"
+      ? p.theme.colors.priorityColorLow
+      : p?.$priority === "medium"
+      ? p.theme.colors.priorityColorMedium
+      : p.theme.colors.priorityColorHigh};
+`;
+
+export const CheckedRadioUp = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid
+    ${(p) =>
+      p?.$priority === "without"
+        ? p.theme.colors.priorityColorWithout
+        : p?.$priority === "low"
+        ? p.theme.colors.priorityColorLow
+        : p?.$priority === "medium"
+        ? p.theme.colors.priorityColorMedium
+        : p.theme.colors.priorityColorHigh};
+`;
+
+export const CheckedRadioIn = styled.span`
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: ${(p) =>
+    p?.$priority === "without"
+      ? p.theme.colors.priorityColorWithout
+      : p?.$priority === "low"
+      ? p.theme.colors.priorityColorLow
+      : p?.$priority === "medium"
+      ? p.theme.colors.priorityColorMedium
+      : p.theme.colors.priorityColorHigh};
+`;
+
+export const Span = styled.span`
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+
+  color: ${(p) => p.theme.colors.secondaryTextColorLowOp};
+  transition: color var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.accentTextColor};
+  }
+`;
+export const CheckedSpan = styled.span`
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+`;
